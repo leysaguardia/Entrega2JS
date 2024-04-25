@@ -1,4 +1,7 @@
+
+
 // Variables 
+
 
 const baseDeDatos = [
   { id: 1, nombre: 'Mermelada de Damasco', precio: 450, imagen: 'Img/Frascodamasco.png' },
@@ -61,11 +64,14 @@ function borrarItemCarrito(idItem) {
 }
 
 // Función para calcular el total del carrito
-function calcularTotal() {
+ function calcularTotal() {
   return carrito.reduce((total, idItem) => {
     const miItem = baseDeDatos.find((item) => item.id === parseInt(idItem));
     return total + miItem.precio;
   }, 0).toFixed(2);
+
+  document.getElementById('total').textContent = totalCarrito;
+
 }
 
 // Función para vaciar el carrito
@@ -84,6 +90,6 @@ vaciarCarrito();
 
 
 
-
-
-
+document.addEventListener('DOMContentLoaded', () => {
+  renderizarProductos();
+});
