@@ -10,13 +10,20 @@ body {
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+
+
 
 .card {
     transition: transform 0.2s;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    
+
 }
 
 .card:hover {

@@ -54,8 +54,13 @@ function renderizarCarrito() {
     console.log(`${numeroUnidadesItem} x ${miItem.nombre} - ${miItem.precio}${divisa}`);
   });
 
-  console.log('Total:', calcularTotal());
+ /* console.log('Total:', calcularTotal());*/
+ const totalCarrito = calcularTotal();
+  document.getElementById('total').textContent = totalCarrito; 
 }
+
+
+
 
 // Función para borrar un ítem del carrito
 function borrarItemCarrito(idItem) {
@@ -70,9 +75,9 @@ function borrarItemCarrito(idItem) {
     return total + miItem.precio;
   }, 0).toFixed(2);
 
-  document.getElementById('total').textContent = totalCarrito;
 
-}
+
+} 
 
 // Función para vaciar el carrito
 function vaciarCarrito() {
@@ -92,4 +97,6 @@ vaciarCarrito();
 
 document.addEventListener('DOMContentLoaded', () => {
   renderizarProductos();
-});
+}); 
+
+
