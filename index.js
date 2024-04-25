@@ -86,7 +86,4 @@ vaciarCarrito();
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderizarProductos();
-});
 
